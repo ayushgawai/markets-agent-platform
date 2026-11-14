@@ -1,0 +1,12 @@
+{"text": "What is the fee and pricing for the premium subscription?", "agent": "pricing-faq", "keywords": ["pricing", "fee"]}
+{"text": "How much does it cost, what are the monthly charges?", "agent": "pricing-faq", "keywords": ["cost"]}
+{"text": "Summarise the latest research report on market outlook", "agent": "research-summary", "keywords": ["research", "report"]}
+{"text": "Give me a summary of the sector analysis research", "agent": "research-summary", "keywords": ["summary", "research"]}
+{"text": "Am I eligible and do I qualify for this product?", "agent": "product-eligibility", "keywords": ["eligible", "qualify"]}
+{"text": "What are the eligibility requirements and criteria to be allowed?", "agent": "product-eligibility", "keywords": ["eligibility"]}
+{"text": "What is the status of my trade order, has it been executed?", "agent": "trade-status", "keywords": ["trade", "status"]}
+{"text": "Check settlement status for my pending order fill", "agent": "trade-status", "keywords": ["settlement", "order"]}
+{"text": "Which documents do I need for onboarding and account setup?", "agent": "onboarding-docs", "keywords": ["documents", "onboarding"]}
+{"text": "How do I register and complete KYC documents?", "agent": "onboarding-docs", "keywords": ["kyc"]}
+{"text": "I have a complaint, this is urgent, I want a human", "agent": "escalation", "keywords": ["complaint", "urgent"]}
+{"text": "Escalate this, I suspect fraud and want to speak to a human", "agent": "escalation", "keywords": ["fraud", "human"]}

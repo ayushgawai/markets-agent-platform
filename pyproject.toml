@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "markets-agent-platform"
+version = "0.1.0"
+description = "Federated LLM agent onboarding platform with routing, memory, training-ground replay and eval gates"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+service = ["fastapi", "uvicorn", "pydantic"]
+postgres = ["psycopg[binary]"]
+bedrock = ["boto3"]
+dev = ["pytest"]
+
+[project.scripts]
+map = "map_platform.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

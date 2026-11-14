@@ -1,0 +1,12 @@
+<!doctype html><meta charset="utf-8"><title>Markets Agent Platform</title>
+<style>body{font-family:system-ui;margin:2rem;max-width:800px}input{width:70%;padding:.5rem}pre{background:#111;color:#ddd;padding:1rem;overflow:auto}</style>
+<h1>Markets Agent Platform</h1>
+<p>Federated agents, routing, traces &amp; evals. Ask a client request:</p>
+<input id="q" placeholder="What is the fee for the premium plan?"><button onclick="ask()">Ask</button>
+<h3>Agents</h3><pre id="agents">…</pre>
+<h3>Answer</h3><pre id="out">—</pre>
+<p>Traces: <code>traces/spans.jsonl</code> (route → retrieve → generate spans). Evals: run <code>map eval</code> / <code>map replay</code>.</p>
+<script>
+fetch('/agents').then(r=>r.json()).then(d=>agents.textContent=JSON.stringify(d,null,2)).catch(e=>agents.textContent=e);
+async function ask(){const r=await fetch('/ask',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:q.value})});out.textContent=JSON.stringify(await r.json(),null,2)}
+</script>

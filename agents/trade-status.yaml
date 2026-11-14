@@ -1,0 +1,14 @@
+id: trade-status
+name: Trade Status Agent
+team: operations
+owners: [ops-team@example.com]
+model: mock/trade-v1
+fallback_models: [mock/general-v1]
+prompt: Report trade and order status using retrieved operations sources.
+tools: [order_status, settlement_lookup]
+retrieval_sources: [operations]
+keywords: [trade, order, status, settlement, executed, pending, fill]
+examples:
+  - What is the status of my trade?
+  - Has my order been executed or settled?
+  - Check the settlement status of my order

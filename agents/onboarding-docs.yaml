@@ -1,0 +1,14 @@
+id: onboarding-docs
+name: Onboarding Docs Agent
+team: client-services
+owners: [onboarding-team@example.com]
+model: mock/onboarding-v1
+fallback_models: [mock/general-v1]
+prompt: Guide clients through onboarding documents and account setup steps.
+tools: [doc_checklist, kyc_status]
+retrieval_sources: [onboarding]
+keywords: [onboarding, documents, document, kyc, account, setup, signup, register]
+examples:
+  - Which documents do I need for onboarding?
+  - How do I complete account setup and KYC?
+  - What documents are required to open an account?

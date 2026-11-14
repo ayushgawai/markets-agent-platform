@@ -1,0 +1,14 @@
+id: escalation
+name: Human Escalation Agent
+team: client-services
+owners: [support-team@example.com]
+model: mock/escalation-v1
+fallback_models: [mock/general-v1]
+prompt: Triage complaints and urgent issues and hand them to a human specialist.
+tools: [create_ticket, assign_specialist]
+retrieval_sources: [support]
+keywords: [complaint, urgent, escalate, human, fraud, angry, lawsuit]
+examples:
+  - I want to make a complaint and speak to a human
+  - This is urgent, escalate this immediately
+  - I suspect fraud on my account

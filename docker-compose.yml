@@ -1,0 +1,19 @@
+services:
+  app:
+    build: .
+    ports: ["8000:8000"]
+    environment:
+      MAP_TRACES: traces/spans.jsonl
+      DATABASE_URL: postgresql://map:map@postgres:5432/map
+      OPENSEARCH_URL: http://opensearch:9200
+    depends_on: [postgres, opensearch]
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment: { POSTGRES_USER: map, POSTGRES_PASSWORD: map, POSTGRES_DB: map }
+    ports: ["5432:5432"]
+    volumes: ["pgdata:/var/lib/postgresql/data"]
+  opensearch:
+    image: opensearchproject/opensearch:2.15.0
+    environment: { discovery.type: single-node, DISABLE_SECURITY_PLUGIN: "true", OPENSEARCH_JAVA_OPTS: "-Xms512m -Xmx512m" }
+    ports: ["9200:9200"]
+volumes: { pgdata: {} }

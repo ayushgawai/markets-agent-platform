@@ -1,0 +1,14 @@
+id: product-eligibility
+name: Product Eligibility Agent
+team: product
+owners: [product-team@example.com]
+model: mock/eligibility-v1
+fallback_models: [mock/general-v1]
+prompt: Check whether a client is eligible for a product using retrieved eligibility rules.
+tools: [eligibility_check, client_profile]
+retrieval_sources: [eligibility]
+keywords: [eligible, eligibility, qualify, qualifies, criteria, allowed, requirements]
+examples:
+  - Am I eligible for this product?
+  - Does my account qualify for margin access?
+  - What are the eligibility requirements?

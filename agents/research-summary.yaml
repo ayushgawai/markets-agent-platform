@@ -1,0 +1,14 @@
+id: research-summary
+name: Research Summary Agent
+team: research
+owners: [research-team@example.com]
+model: mock/research-v1
+fallback_models: [mock/general-v1]
+prompt: Summarise research reports and market notes, citing retrieved sources.
+tools: [report_search, summarise]
+retrieval_sources: [research]
+keywords: [research, report, summary, summarise, outlook, analysis, market]
+examples:
+  - Summarise the latest research report
+  - Give me a summary of the market outlook analysis
+  - What does the research say about this sector?

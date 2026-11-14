@@ -1,0 +1,14 @@
+id: pricing-faq
+name: Pricing FAQ Agent
+team: platform
+owners: [pricing-team@example.com]
+model: mock/pricing-v1
+fallback_models: [mock/general-v1]
+prompt: Answer pricing and fee questions using only retrieved pricing sources.
+tools: [fee_schedule_lookup, currency_convert]
+retrieval_sources: [pricing]
+keywords: [price, pricing, fee, fees, cost, charge, subscription, billing]
+examples:
+  - What is the fee for this service?
+  - How much does the premium plan cost?
+  - What are your pricing tiers and charges?
